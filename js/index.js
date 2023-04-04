@@ -11,6 +11,9 @@ async function buscaEndereco(cep) {
 var cep = document.getElementById('cep');
 cep.addEventListener("focusout", () => buscaEndereco(cep.value));
 
+var botaoJoao = document.getElementById('botaoJoao');
+botaoJoao.addEventListener("click", () => buscaEndereco());
+
 //Organização do código
 _$ = function (obj) {
 	return document.getElementById(obj);
