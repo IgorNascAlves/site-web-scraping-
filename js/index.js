@@ -18,7 +18,7 @@ async function funcjoao() {
 							</div>
 							<div class="col-md-6 body-card">
 							    <p class="txt-name inline">João</p>
-							    <p class="txt-category badge badge-secondary inline">USADO</p>
+							    <p class="txt-category badge badge-secondary inline">NOVO</p>
 							    <p class="txt-motor">Motor João</p>
 							    <p class="txt-description">João - João km</p>
 							    <ul class="lst-items">
@@ -32,7 +32,7 @@ async function funcjoao() {
 							</div>
 							<div class="col-md-3 value-card">
 								<div class="value">
-									<p class="txt-value">R$ 338.000</p>
+									<p class="txt-value">R$ "Tem coisas que o dinheiro não compra. Para todas as outras, existe Mastercard"</p>
 								</div>
 							</div>
 						</div>`
