@@ -3,11 +3,6 @@ var total_count;
 var links;
 var pages;
 
-async function buscaEndereco(cep) {
-    var mensagemErro = document.getElementById('erro');
-	mensagemErro.innerHTML = `<p>CEP inválido. Tente novamente!</p>`
-}
-
 async function funcjoao() {
     var mensagemErro = document.getElementById('cardJoao');
 	mensagemErro.innerHTML = `<div class="well card">
@@ -38,10 +33,6 @@ async function funcjoao() {
 						</div>`
 }
 
-
-
-var cep = document.getElementById('cep');
-cep.addEventListener("focusout", () => buscaEndereco(cep.value));
 
 var botaoJoao = document.getElementById('botaoJoao');
 botaoJoao.addEventListener("click", () => funcjoao());
