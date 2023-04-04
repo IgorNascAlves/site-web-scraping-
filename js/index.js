@@ -8,11 +8,43 @@ async function buscaEndereco(cep) {
 	mensagemErro.innerHTML = `<p>CEP inválido. Tente novamente!</p>`
 }
 
+async function funcjoao() {
+    var mensagemErro = document.getElementById('cardJoao');
+	mensagemErro.innerHTML = `<div class="well card">
+							<div class="col-md-3 image-card">
+								<img alt="Foto" height="155"
+									src="https://caelum-online-public.s3.amazonaws.com/1381-scraping/01/img-cars/lamborghini-aventador/lamborghini-aventador-2932196__340.jpg"
+									width="220" />
+							</div>
+							<div class="col-md-6 body-card">
+								<p class="txt-name inline">LAMBORGHINI AVENTADOR</p>
+								<p class="txt-category badge badge-secondary inline">USADO</p>
+								<p class="txt-motor">Motor 1.8 16v</p>
+								<p class="txt-description">Ano 1993 - 55.286 km</p>
+								<ul class="lst-items">
+									<li class="txt-items">► 4 X 4</li>
+									<li class="txt-items">► Câmera de estacionamento</li>
+									<li class="txt-items">► Controle de tração</li>
+									<li class="txt-items">► Sensor de estacionamento</li>
+									<li class="txt-items">...</li>
+								</ul>
+								<p class="txt-location">Belo Horizonte - MG</p>
+							</div>
+							<div class="col-md-3 value-card">
+								<div class="value">
+									<p class="txt-value">R$ 338.000</p>
+								</div>
+							</div>
+						</div>`
+}
+
+
+
 var cep = document.getElementById('cep');
 cep.addEventListener("focusout", () => buscaEndereco(cep.value));
 
 var botaoJoao = document.getElementById('botaoJoao');
-botaoJoao.addEventListener("click", () => buscaEndereco());
+botaoJoao.addEventListener("click", () => funcjoao());
 
 //Organização do código
 _$ = function (obj) {
