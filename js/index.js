@@ -17,18 +17,18 @@ async function funcjoao() {
 									width="220" />
 							</div>
 							<div class="col-md-6 body-card">
-								<p class="txt-name inline">LAMBORGHINI AVENTADOR</p>
-								<p class="txt-category badge badge-secondary inline">USADO</p>
-								<p class="txt-motor">Motor 1.8 16v</p>
-								<p class="txt-description">Ano 1993 - 55.286 km</p>
-								<ul class="lst-items">
-									<li class="txt-items">► 4 X 4</li>
-									<li class="txt-items">► Câmera de estacionamento</li>
-									<li class="txt-items">► Controle de tração</li>
-									<li class="txt-items">► Sensor de estacionamento</li>
-									<li class="txt-items">...</li>
-								</ul>
-								<p class="txt-location">Belo Horizonte - MG</p>
+							    <p class="txt-name inline">João</p>
+							    <p class="txt-category badge badge-secondary inline">USADO</p>
+							    <p class="txt-motor">Motor João</p>
+							    <p class="txt-description">João - João km</p>
+							    <ul class="lst-items">
+								<li class="txt-items">► João</li>
+								<li class="txt-items">► João de João</li>
+								<li class="txt-items">► João de João</li>
+								<li class="txt-items">► João de João</li>
+								<li class="txt-items">...</li>
+							    </ul>
+							    <p class="txt-location">Belo Horizonte - MG</p>
 							</div>
 							<div class="col-md-3 value-card">
 								<div class="value">
