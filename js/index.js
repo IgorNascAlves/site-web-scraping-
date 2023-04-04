@@ -32,7 +32,7 @@ async function funcjoao() {
 							</div>
 							<div class="col-md-3 value-card">
 								<div class="value">
-									<p class="txt-value">R$ "Tem coisas que o dinheiro não compra. Para todas as outras, existe Mastercard"</p>
+									<p class="txt-value">R$ 999.999.999,00</p>
 								</div>
 							</div>
 						</div>`
