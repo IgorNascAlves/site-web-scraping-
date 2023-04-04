@@ -13,7 +13,7 @@ async function funcjoao() {
 	mensagemErro.innerHTML = `<div class="well card">
 							<div class="col-md-3 image-card">
 								<img alt="Foto" height="155"
-									src="https://caelum-online-public.s3.amazonaws.com/1381-scraping/01/img-cars/lamborghini-aventador/lamborghini-aventador-2932196__340.jpg"
+									src="https://avatars.githubusercontent.com/u/67297228?s=100&v=4.jpg"
 									width="220" />
 							</div>
 							<div class="col-md-6 body-card">
