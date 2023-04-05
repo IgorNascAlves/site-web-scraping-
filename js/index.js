@@ -32,7 +32,7 @@ async function createCard() {
 							    <p class="txt-name inline">${cep.Produto}</p>
 							    <p class="txt-category badge badge-secondary inline">${cep['Categoria do Produto']}</p>
 							    <p class="txt-motor">${cep['Local da compra']}</p>
-							    <p class="txt-description">${cep['Vendedor']}</p>
+							    <p class="txt-description">Vendedor(a): ${cep['Vendedor']}</p>
 							    <ul class="lst-items">
 								<li class="txt-items">►${cep['Data da Compra']}</li>
 								<li class="txt-items">...</li>
