@@ -17,7 +17,7 @@ async function createCard() {
 			console.log(erro);
 		}
 
-	var mensagemErro = document.getElementById('cardJoao');
+	var mensagemErro = document.getElementById('cardAPI');
 
 	var cep = consultaCEPConvertida[0];
 	console.log(cep)
@@ -25,7 +25,7 @@ async function createCard() {
 	mensagemErro.innerHTML = `<div class="well card">
 							<div class="col-md-3 image-card">
 								<img alt="Foto" height="155"
-									src="https://avatars.githubusercontent.com/u/67297228?s=100&v=4.jpg"
+									src="https://cf.shopee.com.br/file/b5249fde5fe8065a88874e6caf06185d.jpg"
 									width="220" />
 							</div>
 							<div class="col-md-6 body-card">
@@ -35,9 +35,6 @@ async function createCard() {
 							    <p class="txt-description">${cep['Vendedor']}</p>
 							    <ul class="lst-items">
 								<li class="txt-items">►${cep['Data da Compra']}</li>
-								<li class="txt-items">► João de João</li>
-								<li class="txt-items">► João de João</li>
-								<li class="txt-items">► João de João</li>
 								<li class="txt-items">...</li>
 							    </ul>
 							    <p class="txt-location">Belo Horizonte - MG</p>
@@ -52,6 +49,6 @@ async function createCard() {
 	
 }
 
-var botaoJoao = document.getElementById('botaoJoao');
+var botaoAPI = document.getElementById('botaoAPI');
 
-botaoJoao.addEventListener("click", () => createCard());
+botaoAPI.addEventListener("click", () => createCard());
