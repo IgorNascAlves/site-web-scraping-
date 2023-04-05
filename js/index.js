@@ -25,7 +25,7 @@ async function createCard() {
 	mensagemErro.innerHTML = `<div class="well card">
 							<div class="col-md-3 image-card">
 								<img alt="Foto" height="155"
-									src="https://cf.shopee.com.br/file/b5249fde5fe8065a88874e6caf06185d.jpg"
+									src="https://i0.hippopx.com/photos/306/544/1016/kindle-update-kindle-download-amazon-kindle-update-update-kindle-preview.jpg"
 									width="220" />
 							</div>
 							<div class="col-md-6 body-card">
