@@ -77,17 +77,18 @@ def search_recent_tweets():
     # # Gera uma lista de textos relacionados à query usando a API do ChatGPT
     # texts = []
     # for i in range(10):
-    #     prompt = f"Generate a tweet about '{query}'"
+    #     prompt = "Generate as many tweets in portuguese as possible in up to 4000 tokens"
     #     response = openai.Completion.create(
-    #         engine="davinci",
+    #         engine="text-davinci-003",
     #         prompt=prompt,
-    #         max_tokens=50,
-    #         n=1,
-    #         stop=None,
-    #         temperature=0.5
+    #         max_tokens=4097-len(prompt),
+    #         temperature=1,
+    #         top_p=1.0,
+    #         frequency_penalty=0.0,
+    #         presence_penalty=0.0
     #     )
     #     text = response.choices[0].text.strip()
-    #     texts.append(text)
+    #     texts.append(text) 
 
     # Gera uma lista de tweets fictícios usando a API mock
     texts = [
