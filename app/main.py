@@ -35,7 +35,7 @@ app = flask.Flask(__name__)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['JSON_SORT_KEYS'] = False
 
-with open("/home/igornascimento/mysite/dados_ecomerce.json", encoding='utf-8') as f:
+with open("dados_ecomerce.json", encoding='utf-8') as f:
   dados = json.load(f)
 
 
@@ -148,7 +148,9 @@ def search_recent_tweets():
 
     return response
 
-
+if __name__ == "__main__":
+  app.run(host='0.0.0.0', port='8080')
+  
 # def run():
 #   app.run(host='0.0.0.0')
 
