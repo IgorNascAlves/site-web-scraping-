@@ -21,7 +21,7 @@ podman build . -t api-curso-xpto:v1.0
 Para criar o container
 
 ```
-podman run -rm -d --name api-curso -p 8080:8080 api-curso-xpto:v1.0
+podman run --rm -d --name api-curso -p 8080:8080 api-curso-xpto:v1.0
 ```
 
 A aplicação vai ficar disponivel em:
