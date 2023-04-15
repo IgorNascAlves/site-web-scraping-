@@ -1,6 +1,6 @@
 # Tarefas
 
-- [x] Criar API do Flask
+- [x] Criar API em Flask
 - [x] Cria pagina HTML
 - [x] Criar API mock do Twitter
 - [x] Colocar projeto em Docker
