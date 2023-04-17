@@ -5,9 +5,10 @@
 - [x] Criar API mock do Twitter
 - [x] Colocar projeto em Docker
 - [x] Colocar projeto em cloud
+- [x] Configurar domínio
 - [ ] Adicionar certificado
-- [ ] Configurar domínio
 - [ ] Transferir pagina do github pages
+- [ ] CICD
 
 
 # Links
