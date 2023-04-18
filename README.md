@@ -7,6 +7,7 @@
 - [x] Colocar projeto em cloud
 - [x] Configurar domínio
 - [ ] Adicionar certificado
+- [ ] Token-Based Authentication
 - [ ] Transferir pagina do github pages
 - [ ] CICD
 
