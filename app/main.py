@@ -1,10 +1,7 @@
 # Importando os módulos necessários
 import json
-import flask
 import random
-from flask import request, make_response, jsonify
-# from flask_cors import CORS, cross_origin
-# from threading import Thread
+from flask import request, make_response, jsonify, render_template, Flask
 from datetime import datetime
 
 
@@ -30,31 +27,32 @@ def filtrar_por_regiao(dados, regiao=None, ano=None):
 
 
 
-app = flask.Flask(__name__)
-# cors = CORS(app)
-# app.config['CORS_HEADERS'] = 'Content-Type'
+app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
-with open("dados_ecomerce.json", encoding='utf-8') as f:
+with open("app/dados/dados_ecomerce.json", encoding='utf-8') as f:
   dados = json.load(f)
 
 
 
 @app.route('/')
 def home():
-  return "Olá, sou a API"
+  return render_template('index.html')
+
+@app.route('/hello-world')
+def hello_world():
+  return render_template('hello-world.html')
 
 
 @app.route("/produtos")
-# @cross_origin()
 def produtos():
 
-  regiao = flask.request.args.get("regiao", default=None, type=str)
-  ano = flask.request.args.get("ano", default=None, type=int)
+  regiao = request.args.get("regiao", default=None, type=str)
+  ano = request.args.get("ano", default=None, type=int)
 
   dados_filtrados = filtrar_por_regiao(dados, regiao, ano)
 
-  return flask.jsonify(dados_filtrados)
+  return jsonify(dados_filtrados)
 
 
 @app.route('/2/tweets/search/recent')
@@ -63,32 +61,11 @@ def search_recent_tweets():
     query = request.args.get('query')
     start_time = request.args.get('start_time')
     end_time = request.args.get('end_time')
-    # next_token = request.args.get('next_token')
-
-    # # Define os campos de retorno dos tweets
-    # tweet_fields = 'tweet.fields=created_at,public_metrics,text'
-    # user_fields = 'user.fields=username'
 
 
     # Converte as datas para o formato correto
     start_date = datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%S.%fZ')
     end_date = datetime.strptime(end_time, '%Y-%m-%dT%H:%M:%S.%fZ')
-
-    # # Gera uma lista de textos relacionados à query usando a API do ChatGPT
-    # texts = []
-    # for i in range(10):
-    #     prompt = "Generate as many tweets in portuguese as possible in up to 4000 tokens"
-    #     response = openai.Completion.create(
-    #         engine="text-davinci-003",
-    #         prompt=prompt,
-    #         max_tokens=4097-len(prompt),
-    #         temperature=1,
-    #         top_p=1.0,
-    #         frequency_penalty=0.0,
-    #         presence_penalty=0.0
-    #     )
-    #     text = response.choices[0].text.strip()
-    #     texts.append(text) 
 
     # Gera uma lista de tweets fictícios usando a API mock
     texts = [
@@ -150,13 +127,3 @@ def search_recent_tweets():
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port='8080')
-  
-# def run():
-#   app.run(host='0.0.0.0')
-
-# def keep_alive():
-#   t = Thread(target=run)
-#   t.start()
-
-# if __name__ == "__main__":
-#   keep_alive()

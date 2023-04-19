@@ -6,7 +6,7 @@ var pages;
 async function createCard() {
 
 	try {
-        var consultaCEP = await fetch(`https://IdolizedBriefChief.popoflipe.repl.co/produtos?regiao=norte&ano=2022`);
+        var consultaCEP = await fetch(`/produtos?regiao=norte&ano=2022`);
         var consultaCEPConvertida = await consultaCEP.json();
         if (consultaCEPConvertida.erro) {
             throw Error('CEP não existente!');

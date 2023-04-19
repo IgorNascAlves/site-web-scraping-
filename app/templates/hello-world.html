@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Alura Motors</title>
+    <title>Gená Mall</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/styles.css" media="all">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" media="all">
 
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+	<!-- <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script> -->
 
 </head>
 <body cz-shortcut-listen="true">
@@ -21,12 +21,12 @@
             <nav class="navbar navbar-inverse" style="margin-bottom: 0;">
                 <div class="container" style="margin-bottom: -20px;">
                     <div class="navbar">
-                        <a href="./index.html" class="navbar-brand" title="Alura Motors">
-                            <img src="img/alura-logo.svg" class="d-inline-block align-top" alt="Alura">Motors
+                        <a href="./" class="navbar-brand" title="Gená Mall">
+                            Gená Mall
                         </a>
                         <ul class="nav navbar-nav" style="margin-top: 35px;">
-                            <li><a href="./hello-world.html">Hello World</a></li>
-                            <li><a href="./index.html">Anúncios</a></li>
+                            <li><a href="./hello-world">Hello World</a></li>
+                            <li><a href="./">Anúncios</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,8 +49,8 @@
 			<nav class="navbar navbar-inverse">
 				<div class="container" style="margin-bottom: 10px;">
 					<div class="navbar">
-						<a href="./index.php" class="navbar-brand" title="Alura Motors">
-							<img src="img/alura-logo.svg" class="d-inline-block align-top" alt="Alura">Motors
+						<a href="./" class="navbar-brand" title="Gená Mall">
+							Gená Mall
 						</a>
 						<p style="color: #fff; text-align: center; margin-top: 40px;">Aplicação para treinamento de web scraping</p>
 					</div>
