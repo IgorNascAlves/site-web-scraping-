@@ -6,4 +6,8 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "app/main.py"]
+EXPOSE 8080
+
+USER 1001
+
+CMD ["uwsgi", "--chdir", "app/", "--http", "0.0.0.0:8080", "--master", "-p", "4", "-w", "wsgi:app"]
