@@ -9,7 +9,7 @@ def carrega_dados():
     Carrega dados do arquivo JSON de um diretório específico.
     :return: retorna os dados em formato de dicionário
     """
-    with open("app/dados/dados_ecomerce.json", encoding='utf-8') as f:
+    with open("dados/dados_ecomerce.json", encoding='utf-8') as f:
         dados = load(f)
     return dados
 
