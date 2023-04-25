@@ -6,9 +6,9 @@
 - [x] Colocar projeto em Docker
 - [x] Colocar projeto em cloud
 - [x] Configurar domínio
-- [ ] Adicionar certificado
-- [ ] Token-Based Authentication
+- [x] Adicionar certificado
 - [x] Transferir pagina do github pages
+- [ ] Token-Based Authentication
 - [ ] CICD
 
 
