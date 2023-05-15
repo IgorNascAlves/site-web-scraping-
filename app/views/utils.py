@@ -52,8 +52,9 @@ def filtrar_por_regiao(dados, regiao=None, ano=None):
 
 def gera_tweets(query, start_time, end_time):
     # Converte as datas para o formato correto
-    start_date = datetime.strptime(start_time, '%Y-%m-%dT%H:%M:%S.%fZ')
-    end_date = datetime.strptime(end_time, '%Y-%m-%dT%H:%M:%S.%fZ')
+    format_string = '%Y-%m-%dT%H:%M:%S.%f%z'
+    start_date = datetime.strptime(start_time, format_string)
+    end_date = datetime.strptime(end_time, format_string)
 
     # Gera uma lista de tweets fictícios usando a API mock
     texts = [
@@ -70,7 +71,7 @@ def gera_tweets(query, start_time, end_time):
         tweet = {
             'edit_history_tweet_ids': [random.randint(0, 100)],
             'author_id': str(random.randint(0, 100)),
-            'created_at': (start_date + (end_date - start_date) * random.random()).strftime('%Y-%m-%dT%H:%M:%SZ'),
+            'created_at': (start_date + (end_date - start_date) * random.random()).strftime(format_string),
             'text': random.choice(texts),
             'public_metrics': {
                 'retweet_count': random.randint(0, 100),
@@ -91,7 +92,7 @@ def gera_tweets(query, start_time, end_time):
         user = {
             "id": str(random.randint(0, 100)),
             "name": "User " + str(i+1),
-            "created_at": (start_date + (end_date - start_date) * random.random()).strftime('%Y-%m-%dT%H:%M:%SZ'),
+            "created_at": (start_date + (end_date - start_date) * random.random()).strftime(format_string),
             "username": "user" + str(i+1)
         }
         users.append(user)
